@@ -1,5 +1,12 @@
+import { Hero } from "@/components/Hero";
 import React from "react";
 
-export const page = () => {
-  return <main>page</main>;
+const HomePage = () => {
+  return (
+    <main className="mt-20">
+      <Hero />
+    </main>
+  );
 };
+
+export default HomePage;
