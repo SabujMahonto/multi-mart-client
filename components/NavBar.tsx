@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "./Button";
 
 export const NavBar = () => {
   return (
@@ -38,9 +39,7 @@ export const NavBar = () => {
           </nav>
           {/* NAV RIGHT */}
           <nav>
-            <span>
-              <Link href="/login">LogIn</Link>
-            </span>
+            <Button />
           </nav>
         </div>
       </header>
