@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { cva, VariantProps } from "class-variance-authority";
+import Link from "next/link";
+import clsx from "clsx";
 
 const buttonVariants = cva("px-6 py-3 rounded-xl duration-300", {
   variants: {
@@ -14,11 +15,27 @@ const buttonVariants = cva("px-6 py-3 rounded-xl duration-300", {
     color: "green",
   },
 });
-const Button = () => {
+
+interface ButtonProps extends VariantProps<typeof buttonVariants> {
+  href: string;
+  target?: string;
+  placeholder: string;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  href,
+  target,
+  placeholder,
+  color,
+}) => {
   return (
-    <span className="bg-accent1 text-light px-6 py-3  rounded-xl hover:bg-accent1/90 duration-300">
-      <Link href="/login">LogIn</Link>
-    </span>
+    <Link
+      href={href}
+      target={target}
+      className={clsx(buttonVariants({ color }))}
+    >
+      {placeholder}
+    </Link>
   );
 };
 

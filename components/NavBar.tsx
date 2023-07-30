@@ -39,7 +39,7 @@ export const NavBar = () => {
           </nav>
           {/* NAV RIGHT */}
           <nav>
-            <Button />
+            <Button href="/login" placeholder="Login" color="green" />
           </nav>
         </div>
       </header>
