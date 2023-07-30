@@ -21,3 +21,6 @@
 .link-item:hover::after {
   @apply w-full;
 }
+body {
+  /* @apply overflow-hidden; */
+}
